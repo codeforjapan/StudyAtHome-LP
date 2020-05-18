@@ -97,11 +97,8 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .title {
   margin: 17px auto;
-  font-style: normal;
   font-weight: bold;
-  line-height: 180%;
-  align-items: center;
-  text-align: center;
+  padding: 2px 0;
   letter-spacing: 0.03em;
   &En {
     color: #0071c2;
@@ -111,7 +108,7 @@ export default Vue.extend({
   &Ja {
     font-size: 24px;
     display: block;
-    color: #333333;
+    color: #424242;
   }
 }
 .cardUrl {
@@ -121,22 +118,19 @@ export default Vue.extend({
 .cardTitle {
   padding: 0 6px 4px 6px;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: #424242;
 
   h2 {
-    font-style: normal;
     font-weight: bold;
     font-size: 17px;
     line-height: 180%;
   }
 }
 .cardSubtitle {
-  font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 180%;
   padding: 8px 6px 2px 6px;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: #424242;
 }
 </style>

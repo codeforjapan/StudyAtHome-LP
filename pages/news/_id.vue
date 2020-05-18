@@ -77,21 +77,14 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .newsDetails {
   margin: 17px 0 8px 0;
-  font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 120%;
-  text-align: left;
-  width: 100%;
-  align-items: center;
   letter-spacing: 0.05em;
-  color: #212121;
+  color: #424242;
 }
 .newsTitle {
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 140%;
   margin: 6px 0;
   letter-spacing: 0.03em;
 }
@@ -100,11 +93,8 @@ export default Vue.extend({
   margin: 4px 0;
 }
 .newsContent {
-  margin: 24px 0 8px 0;
-  font-style: normal;
+  margin: 25px 0 8px 0;
   font-size: 14px;
-  line-height: 190%;
-  align-items: center;
   letter-spacing: 0.03em;
 }
 </style>
