@@ -11,7 +11,7 @@
       </div>
       <v-img :src="item.thumbnail.url" alt="" width="100%" />
 
-      <div class="news-content" v-html="item.content" />
+      <div class="newsContent" v-html="item.content" />
     </article>
   </v-layout>
 </template>
@@ -99,7 +99,7 @@ export default Vue.extend({
 .createdAt {
   margin: 4px 0;
 }
-.news-content {
+.newsContent {
   margin: 24px 0 8px 0;
   font-family: Noto Sans JP, sans-serif;
   font-style: normal;

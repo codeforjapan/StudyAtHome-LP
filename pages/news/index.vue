@@ -1,8 +1,8 @@
 <template>
   <v-layout column justify-center align-center>
     <h1 class="title text-center justify-center">
-      <span class="title_eng">News</span>
-      <span class="title_jp">最新情報</span>
+      <span class="titleEng">News</span>
+      <span class="titleJp">最新情報</span>
     </h1>
     <v-row justify="center">
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6">
@@ -13,14 +13,14 @@
               alt="サムネイル画像"
               width="100%"
             />
-            <v-card-subtitle class="card_subtitle">
+            <v-card-subtitle class="cardSubtitle">
               <nuxt-link class="cardUrl" :to="'news/' + item.id">
                 <time :datetime="item.createdAt">{{
                   formatDate(item.createdAt)
                 }}</time>
               </nuxt-link>
             </v-card-subtitle>
-            <v-card-title class="card_title">
+            <v-card-title class="cardTitle">
               <nuxt-link class="cardUrl" :to="'news/' + item.id">
                 <h2>{{ item.title }}</h2>
               </nuxt-link>
@@ -110,12 +110,12 @@ export default Vue.extend({
   text-align: center;
   letter-spacing: 0.03em;
 
-  &_eng {
+  &Eng {
     color: #0071c2;
     display: block;
     font-size: 17px;
   }
-  &_jp {
+  &Jp {
     font-size: 24px;
     display: block;
     color: #333333;
@@ -125,7 +125,7 @@ export default Vue.extend({
   text-decoration: none;
   color: black;
 }
-.card_title {
+.cardTitle {
   padding: 0 6px 4px 6px;
   letter-spacing: 0.03em;
   color: #212121;
@@ -138,7 +138,7 @@ export default Vue.extend({
     line-height: 180%;
   }
 }
-.card_subtitle {
+.cardSubtitle {
   font-family: Noto Sans JP, sans-serif;
   font-style: normal;
   font-weight: bold;
