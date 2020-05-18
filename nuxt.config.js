@@ -55,6 +55,11 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  webfontloader: {
+    google: {
+      families: ['Roboto&display=swap', 'NotoSansJP&&display=swap']
+    }
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
@@ -62,7 +67,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -75,6 +80,9 @@ export default {
         }
       }
     }
+  },
+  env: {
+    API_KEY: process.env.API_KEY
   },
   /*
    ** Build configuration
