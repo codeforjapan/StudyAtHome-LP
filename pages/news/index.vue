@@ -8,11 +8,7 @@
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6">
         <article>
           <v-card elevation="0">
-            <v-img
-              :src="item.thumbnail.url"
-              alt="サムネイル画像"
-              width="100%"
-            />
+            <v-img :src="item.thumbnail.url" alt="" width="100%" />
             <v-card-subtitle class="cardSubtitle">
               <nuxt-link class="cardUrl" :to="'news/' + item.id">
                 <time :datetime="item.createdAt">{{
@@ -101,21 +97,18 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .title {
   margin: 17px auto;
-  font-family: 'Noto Sans JP', sans-serif;
   font-style: normal;
   font-weight: bold;
   line-height: 180%;
-
   align-items: center;
   text-align: center;
   letter-spacing: 0.03em;
-
-  &Eng {
+  &En {
     color: #0071c2;
     display: block;
     font-size: 17px;
   }
-  &Jp {
+  &Ja {
     font-size: 24px;
     display: block;
     color: #333333;
@@ -131,7 +124,6 @@ export default Vue.extend({
   color: #212121;
 
   h2 {
-    font-family: Noto Sans JP, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
@@ -139,7 +131,6 @@ export default Vue.extend({
   }
 }
 .cardSubtitle {
-  font-family: Noto Sans JP, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;

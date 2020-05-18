@@ -77,7 +77,6 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .newsDetails {
   margin: 17px 0 8px 0;
-  font-family: Noto Sans JP, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -89,7 +88,6 @@ export default Vue.extend({
   color: #212121;
 }
 .newsTitle {
-  font-family: Noto Sans JP, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -103,7 +101,6 @@ export default Vue.extend({
 }
 .newsContent {
   margin: 24px 0 8px 0;
-  font-family: Noto Sans JP, sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 190%;
