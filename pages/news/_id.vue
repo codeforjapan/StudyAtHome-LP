@@ -9,7 +9,7 @@
         </span>
         <h1 class="newsTitle">{{ item.title }}</h1>
       </div>
-      <v-img :src="item.thumbnail.url" alt="" width="100%" />
+      <v-img :src="item.thumbnail.url" alt="" />
 
       <div class="newsContent" v-html="item.content" />
     </article>

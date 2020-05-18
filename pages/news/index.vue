@@ -8,7 +8,7 @@
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6">
         <article>
           <v-card elevation="0">
-            <v-img :src="item.thumbnail.url" alt="" width="100%" />
+            <v-img :src="item.thumbnail.url" alt="" />
             <v-card-subtitle class="cardSubtitle">
               <nuxt-link class="cardUrl" :to="'news/' + item.id">
                 <time :datetime="item.createdAt">{{
