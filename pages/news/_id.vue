@@ -4,7 +4,7 @@
       <div class="newsDetails">
         <span class="createdAt">
           <time datetime="item.createdAt">
-            {{ createdAt }}
+            {{ formatDate(item.createdAt) }}
           </time>
         </span>
         <h1 class="newsTitle">{{ item.title }}</h1>
@@ -24,7 +24,6 @@ import dayjs from 'dayjs'
 
 type DataType = {
   item: NewsType
-  createdAt: string
 }
 
 type NewsType = {
@@ -50,8 +49,7 @@ export default Vue.extend({
       }
     )
     return {
-      item: data,
-      createdAt: dayjs(data.createdAt).format('YYYY.MM.DD')
+      item: data
     }
   },
   data(): DataType {
@@ -65,8 +63,12 @@ export default Vue.extend({
           url: ''
         },
         content: ''
-      },
-      createdAt: ''
+      }
+    }
+  },
+  methods: {
+    formatDate(date: string): string {
+      return dayjs(date).format('YYYY.MM.DD')
     }
   }
 })
