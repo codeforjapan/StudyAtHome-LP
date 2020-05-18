@@ -1,27 +1,49 @@
 <template>
   <v-layout column>
-    <div class="newsDetails">
-      <span class="createdAt">
-        <time datetime="item.createdAt">
-          {{ createdAt }}
-        </time>
-      </span>
-      <h1 class="newsTitle">{{ item.title }}</h1>
-    </div>
-    <v-img :src="item.thumbnail.url" alt="サムネイル画像" width="100%" />
+    <article>
+      <div class="newsDetails">
+        <span class="createdAt">
+          <time datetime="item.createdAt">
+            {{ createdAt }}
+          </time>
+        </span>
+        <h1 class="newsTitle">{{ item.title }}</h1>
+      </div>
+      <v-img :src="item.thumbnail.url" alt="" width="100%" />
 
-    <div class="news-content" v-html="item.content" />
+      <div class="news-content" v-html="item.content" />
+    </article>
   </v-layout>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import { Context } from '@nuxt/types'
 import axios from 'axios'
 import dayjs from 'dayjs'
 
-export default {
+type DataType = {
+  item: NewsType
+  createdAt: string
+}
+
+type NewsType = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  title: string
+  thumbnail: ThumbnailType
+  content: string
+}
+
+type ThumbnailType = {
+  url: string
+}
+
+export default Vue.extend({
   name: 'Id',
-  async asyncData({ params }) {
-    const { data } = await axios.get(
+  async asyncData({ params }: Context) {
+    const { data } = await axios.get<NewsType>(
       'https://studyathome.microcms.io/api/v1/news/' + params.id,
       {
         headers: { 'X-API-KEY': process.env.API_KEY }
@@ -32,13 +54,22 @@ export default {
       createdAt: dayjs(data.createdAt).format('YYYY.MM.DD')
     }
   },
-  data() {
+  data(): DataType {
     return {
-      item: {},
+      item: {
+        id: '',
+        createdAt: '',
+        updatedAt: '',
+        title: '',
+        thumbnail: {
+          url: ''
+        },
+        content: ''
+      },
       createdAt: ''
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
