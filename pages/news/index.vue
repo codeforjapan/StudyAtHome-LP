@@ -1,8 +1,8 @@
 <template>
   <v-layout column justify-center align-center>
     <h1 class="title text-center justify-center">
-      <span class="titleEng">News</span>
-      <span class="titleJp">最新情報</span>
+      <span class="titleEn">News</span>
+      <span class="titleJa">最新情報</span>
     </h1>
     <v-row justify="center">
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6">
