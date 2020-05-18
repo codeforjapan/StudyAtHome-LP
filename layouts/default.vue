@@ -15,3 +15,9 @@
     </v-footer>
   </v-app>
 </template>
+
+<style lang="scss">
+* :not(.v-icon) {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+</style>
