@@ -7,7 +7,16 @@
 <script>
 export default {
   // eslint-disable-next-line vue/require-prop-types
-  props: ['name', 'url']
+  props: {
+    name: {
+      type: String,
+      required: true
+    },
+    url: {
+      type: String,
+      required: true
+    }
+  }
 }
 </script>
 
