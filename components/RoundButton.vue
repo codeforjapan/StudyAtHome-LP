@@ -14,7 +14,7 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/variables.scss';
 .RoundButton {
-  background: $blue;
+  background: $base-blue;
   color: $white;
   border-radius: 24px;
   width: 200px;
