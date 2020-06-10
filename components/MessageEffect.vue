@@ -26,7 +26,6 @@ export default {
 }
 .Message {
   white-space: pre-wrap;
-  max-width: 259px;
   line-height: 150%;
   font-weight: bold;
   font-size: 15px;
