@@ -1,7 +1,5 @@
 <template>
-  <a :href="url">
-    <v-btn rounded>{{ name }}</v-btn>
-  </a>
+  <v-btn rounded :href="url">{{ name }}</v-btn>
 </template>
 
 <script>
