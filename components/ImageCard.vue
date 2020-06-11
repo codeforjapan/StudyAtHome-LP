@@ -1,7 +1,7 @@
 <template>
   <v-card class="ImageCard" :href="url">
     <div class="ImageContent">
-      <v-img :src="imgpath"></v-img>
+      <v-img :src="imgpath" />
     </div>
   </v-card>
 </template>
