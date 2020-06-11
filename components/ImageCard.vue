@@ -1,7 +1,7 @@
 <template>
   <v-card class="ImageCard" :href="url">
     <div class="ImageContent">
-      <v-img :src="imgpath"></v-img>
+      <v-img :src="imgPath"></v-img>
     </div>
   </v-card>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   props: {
-    imgpath: {
+    imgPath: {
       type: String,
       required: true
     },
