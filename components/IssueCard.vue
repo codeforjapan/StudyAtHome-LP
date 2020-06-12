@@ -1,7 +1,7 @@
 <template>
-  <v-card outlined class="card">
-    <h2 class="card-title">{{ title }}</h2>
-    <div class="card-list">
+  <v-card outlined class="IssueCard">
+    <h2 class="IssueCard-title">{{ title }}</h2>
+    <div class="IssueCard-list">
       <ul>
         <li v-for="item in items" :key="item">
           {{ item }}
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
+.IssueCard {
   margin: 16px;
   color: $dark-gray;
   background-color: $light-gray;
