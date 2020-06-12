@@ -4,3 +4,25 @@ $base-blue: #0071c2;
 $dark-gray: #333333;
 $light-gray: #fafafa;
 $white: #ffffff;
+
+// ==================
+// break-points
+$huge: 1440;
+$large: 1170;
+$medium: 768;
+$small: 600;
+$tiny: 380;
+
+// ==================
+// media-query
+@mixin largerThan($width) {
+  @media screen and (min-width: $width + 1 + px) {
+    @content;
+  }
+}
+
+@mixin lessThan($width) {
+  @media screen and (max-width: $width + px) {
+    @content;
+  }
+}
