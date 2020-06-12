@@ -32,12 +32,12 @@ export default {
   display: inline-block;
   width: 100px;
   height: 145px;
-}
-.ContriCard img {
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid #f3f3f4;
-  box-sizing: border-box;
+  > img {
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #f3f3f4;
+    box-sizing: border-box;
+  }
 }
 .ContriText {
   width: 100%;
