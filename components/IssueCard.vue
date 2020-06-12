@@ -1,7 +1,7 @@
 <template>
   <v-card outlined class="IssueCard">
-    <h2 class="IssueCard-title">{{ title }}</h2>
-    <div class="IssueCard-list">
+    <h2 class="IssueCard-Title">{{ title }}</h2>
+    <div class="IssueCard-List">
       <ul>
         <li v-for="item in items" :key="item">
           {{ item }}
@@ -32,7 +32,7 @@ export default {
   color: $dark-gray;
   background-color: $light-gray;
 
-  &-title {
+  &-Title {
     margin-top: 29px;
     margin-bottom: 24px;
     font-style: normal;
@@ -42,7 +42,7 @@ export default {
     letter-spacing: 0.03em;
   }
 
-  &-list {
+  &-List {
     display: flex;
     justify-content: center;
     li {
