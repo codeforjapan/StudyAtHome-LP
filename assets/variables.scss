@@ -6,3 +6,25 @@
 // color
 $base-blue: #0071C2;
 $white:#FFFFFF;
+
+// ==================
+// break-points
+$huge: 1440;
+$large: 1170;
+$medium: 768;
+$small: 600;
+$tiny: 380;
+
+// ==================
+// media-query
+@mixin largerThan($width) {
+  @media screen and (min-width: $width + 1 + px) {
+    @content;
+  }
+}
+
+@mixin lessThan($width) {
+  @media screen and (max-width: $width + px) {
+    @content;
+  }
+}
