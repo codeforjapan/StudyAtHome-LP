@@ -26,11 +26,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/global.scss'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~plugins/vue-carousel', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
