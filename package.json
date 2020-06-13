@@ -26,7 +26,8 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "nuxt": "^2.0.0",
-    "nuxt-webfontloader": "^1.1.0"
+    "nuxt-webfontloader": "^1.1.0",
+    "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",

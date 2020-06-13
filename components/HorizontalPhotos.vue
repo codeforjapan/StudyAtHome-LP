@@ -68,7 +68,5 @@ export default {
   bottom: 0;
   right: 0;
   object-fit: cover;
-  max-width: 100%;
-  height: auto;
 }
 </style>
