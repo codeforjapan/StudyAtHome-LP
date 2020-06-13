@@ -55,10 +55,17 @@ export default {
       font-weight: 500;
       line-height: 180%;
       letter-spacing: 0.03em;
-      padding-left: 30px;
+      text-indent: -1.7em;
+      padding-left: 1.7em;
       padding-right: 10px;
       margin-bottom: 21px;
-      background: url('/svgs/check_mark.svg') no-repeat left 0 top 2px;
+
+      &:before {
+        font-family: 'Material Design Icons', sans-serif;
+        content: '\f05e0';
+        font-size: 20px;
+        color: $base-blue;
+      }
     }
   }
 }
