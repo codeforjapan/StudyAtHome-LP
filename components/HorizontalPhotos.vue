@@ -1,7 +1,11 @@
 <template>
   <div class="HorizontalPhotos">
     <ul class="HorizontalPhotos-List">
-      <li v-for="(item, index) in items" :key="index" class="HorizontalPhotos-Item">
+      <li
+        v-for="(item, index) in items"
+        :key="index"
+        class="HorizontalPhotos-Item"
+      >
         <img :src="item.filePath" alt="" class="HorizontalPhotos-Img" />
       </li>
     </ul>
@@ -52,7 +56,7 @@ export default {
   margin: 0 8px;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 60%;
   }

@@ -1,9 +1,5 @@
 <template>
-  <v-card
-    outlined
-    :href="url"
-    class="ImageCard"
-  >
+  <v-card outlined :href="url" class="ImageCard">
     <div class="ImageContent">
       <v-img :src="imgPath"></v-img>
     </div>
