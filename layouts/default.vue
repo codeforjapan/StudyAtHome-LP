@@ -56,7 +56,7 @@ html {
 
 .app {
   max-width: 1920px;
-  color: $dark-gray;
+  color: $base-gray;
   margin: 0 auto;
   background-color: inherit !important;
 }
@@ -91,7 +91,7 @@ html {
     &-right {
       text-align: center;
       a {
-        color: $dark-gray;
+        color: $base-gray;
         text-decoration: none;
       }
     }

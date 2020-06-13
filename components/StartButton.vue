@@ -19,8 +19,8 @@ export default {
 
 <style lang="scss" scoped>
 .v-btn {
-  background-color: #ffdb6c !important;
-  color: #424242;
+  background-color: $base-yellow !important;
+  color: $dark-gray;
   width: 268px;
   height: 60px !important;
   transition: 0.3s;
