@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 .IssueCard {
   margin: 16px;
-  color: $dark-gray;
+  color: $base-gray;
   background-color: $light-gray;
 
   &-Title {
