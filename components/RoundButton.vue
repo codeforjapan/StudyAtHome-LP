@@ -24,7 +24,6 @@ export default {
   width: 200px;
   height: 48px;
   transition: 0.3s;
-  font-family: Noto Sans CJK JP;
   font-weight: bold;
   font-size: 15px;
 }
