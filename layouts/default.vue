@@ -50,15 +50,12 @@
 </template>
 
 <style scoped lang="scss">
-html {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
 .app {
   max-width: 1920px;
   color: $base-gray;
   margin: 0 auto;
   background-color: inherit !important;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .header-logo {
