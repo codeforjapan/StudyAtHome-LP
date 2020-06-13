@@ -31,11 +31,4 @@ export default {
   line-height: 180%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.RoundButton:hover {
-  opacity: 0.5;
-  transition: 0.3s;
-}
-.RoundButton:focus {
-  outline: none;
-}
 </style>
