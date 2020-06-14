@@ -33,7 +33,6 @@ export default {
 
 <style lang="scss" scoped>
 .IconCard {
-  margin: 12px 17px 12px 17px;
   text-align: center;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 
