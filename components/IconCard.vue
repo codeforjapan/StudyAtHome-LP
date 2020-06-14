@@ -2,7 +2,9 @@
   <v-card class="IconCard" height="295px">
     <div class="Icon">
       <div class="Icon-In">
-        <img :src="iconPath" :alt="iconPath" />
+        <v-icon color="#fff" size="23" class="MDI">
+          {{ iconName }}
+        </v-icon>
       </div>
     </div>
     <p class="Title">{{ title }}</p>
@@ -17,7 +19,7 @@ export default {
       type: String,
       required: true
     },
-    iconPath: {
+    iconName: {
       type: String,
       required: true
     },
@@ -48,7 +50,7 @@ export default {
       padding-top: 100%;
       border-radius: 50%;
       background-color: $base-blue;
-      img {
+      .MDI {
         position: absolute;
         margin-left: -10px;
         margin-top: -43px;
