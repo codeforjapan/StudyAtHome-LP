@@ -18,6 +18,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MessageEffect {
+  margin-left: auto;
+  margin-right: auto;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
