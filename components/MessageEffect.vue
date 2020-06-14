@@ -1,7 +1,7 @@
 <template>
   <div class="MessageEffect">
     <span class="Rotate RotateLeft"></span>
-    <span class="Message">{{ name }}</span>
+    <span class="Message">{{ title }}</span>
     <span class="Rotate RotateRight"></span>
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   props: {
-    name: {
+    title: {
       type: String,
       required: true
     }
