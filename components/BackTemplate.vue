@@ -61,6 +61,9 @@ export default {
 
 .GrayBackGround {
   background-color: $light-gray;
+  @include largerThan($small) {
+    border: 1px solid $border-gray;
+  }
 }
 
 .WhiteBackGround {
