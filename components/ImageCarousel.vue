@@ -28,7 +28,7 @@
             :style="
               `width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`
             "
-          ></div>
+          />
         </slide>
       </carousel>
     </div>

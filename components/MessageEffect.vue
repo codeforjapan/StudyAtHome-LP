@@ -1,8 +1,8 @@
 <template>
   <div class="MessageEffect">
-    <span class="Rotate RotateLeft"></span>
+    <span class="Rotate RotateLeft" />
     <span class="Message">{{ title }}</span>
-    <span class="Rotate RotateRight"></span>
+    <span class="Rotate RotateRight" />
   </div>
 </template>
 
