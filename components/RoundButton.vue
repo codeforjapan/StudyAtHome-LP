@@ -19,6 +19,8 @@ export default {
 
 <style lang="scss" scoped>
 .v-btn {
+  margin-left: auto;
+  margin-right: auto;
   background-color: $base-blue !important;
   color: $white;
   width: 200px;
