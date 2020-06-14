@@ -995,6 +995,30 @@
     "@types/webpack-dev-middleware" "^3.7.0"
     "@types/webpack-hot-middleware" "^2.25.2"
 
+"@nuxt/types@0.7.9":
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.7.9.tgz#a6bc6911672a812063cbb17726304cb536f58a3d"
+  integrity sha512-AsKj+iVV+XlCKKdpfYuLjUCUUNgL+7SzaQPp6/Z6WMqndIXegVMXn2Iu9Ixo+Qd7Y4U1Cvy4e3LYHMj0QNH+Lg==
+  dependencies:
+    "@types/autoprefixer" "^9.7.2"
+    "@types/babel__core" "^7.1.8"
+    "@types/compression" "^1.7.0"
+    "@types/connect" "^3.4.33"
+    "@types/etag" "^1.8.0"
+    "@types/file-loader" "^4.2.0"
+    "@types/html-minifier" "^3.5.3"
+    "@types/less" "^3.0.1"
+    "@types/node" "^12.12.47"
+    "@types/node-sass" "^4.11.1"
+    "@types/optimize-css-assets-webpack-plugin" "^5.0.1"
+    "@types/pug" "^2.0.4"
+    "@types/serve-static" "^1.13.4"
+    "@types/terser-webpack-plugin" "^2.2.1"
+    "@types/webpack" "^4.41.17"
+    "@types/webpack-bundle-analyzer" "^3.8.0"
+    "@types/webpack-dev-middleware" "^3.7.1"
+    "@types/webpack-hot-middleware" "^2.25.3"
+
 "@nuxt/typescript-build@^0.6.0":
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-0.6.6.tgz#3eb49aa8e7fbd88f8bc802c5e79de1f62439473e"
@@ -1006,13 +1030,13 @@
     ts-loader "^6.2.2"
     typescript "~3.8"
 
-"@nuxt/typescript-runtime@^0.4.0":
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.4.6.tgz#c9eb7831be063a5114ced950577e95115bfb32a6"
-  integrity sha512-n30+IeC49+qFG+nz79OjOriViU8jkw38ZSw8D790tjyMjC2/3zOM0c+HMdOvY6jQpOh4vaChXx7WVi+fdjqK6Q==
+"@nuxt/typescript-runtime@^0.4.10":
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-runtime/-/typescript-runtime-0.4.10.tgz#83480c476eb1a503ea82543930f4754b6fb9e9a9"
+  integrity sha512-IxRXl/MeWCiotnj9CV+KNTZEUcOt1J+2pcDgeZtJ5jZwGMAmJad4khj6sQsq8uV28WPvio1+LoIlhBHZ4CAcvw==
   dependencies:
-    "@nuxt/types" "0.7.5"
-    ts-node "^8.9.0"
+    "@nuxt/types" "0.7.9"
+    ts-node "^8.10.2"
     typescript "~3.8"
 
 "@nuxt/utils@2.12.2":
@@ -1235,6 +1259,17 @@
     "@types/babel__template" "*"
     "@types/babel__traverse" "*"
 
+"@types/babel__core@^7.1.8":
+  version "7.1.8"
+  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.8.tgz#057f725aca3641f49fc11c7a87a9de5ec588a5d7"
+  integrity sha512-KXBiQG2OXvaPWFPDS1rD8yV9vO0OuWIqAEqLsbfX0oU2REN5KuoMnZ1gClWcBhO5I3n6oTVAmrMufOvRqdmFTQ==
+  dependencies:
+    "@babel/parser" "^7.1.0"
+    "@babel/types" "^7.0.0"
+    "@types/babel__generator" "*"
+    "@types/babel__template" "*"
+    "@types/babel__traverse" "*"
+
 "@types/babel__generator@*":
   version "7.6.1"
   resolved "https://registry.yarnpkg.com/@types/babel__generator/-/babel__generator-7.6.1.tgz#4901767b397e8711aeb99df8d396d7ba7b7f0e04"
@@ -1384,7 +1419,7 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node-sass@^4.11.0":
+"@types/node-sass@^4.11.0", "@types/node-sass@^4.11.1":
   version "4.11.1"
   resolved "https://registry.yarnpkg.com/@types/node-sass/-/node-sass-4.11.1.tgz#bda27c5181cbf7c090c3058e119633dfb2b6504c"
   integrity sha512-wPOmOEEtbwQiPTIgzUuRSQZ3H5YHinsxRGeZzPSDefAm4ylXWnZG9C0adses8ymyplKK0gwv3JkDNO8GGxnWfg==
@@ -1400,6 +1435,11 @@
   version "12.12.39"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.39.tgz#532d25c1e639d89dd6f3aa1d7b3962e3e7fa943d"
   integrity sha512-pADGfwnDkr6zagDwEiCVE4yQrv7XDkoeVa4OfA9Ju/zRTk6YNDLGtQbkdL4/56mCQQCs4AhNrBIag6jrp7ZuOg==
+
+"@types/node@^12.12.47":
+  version "12.12.47"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.47.tgz#5007b8866a2f9150de82335ca7e24dd1d59bdfb5"
+  integrity sha512-yzBInQFhdY8kaZmqoL2+3U5dSTMrKaYcb561VU+lDzAYvqt+2lojvBEy+hmpSNuXnPTx7m9+04CzWYOUqWME2A==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1451,6 +1491,14 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
+"@types/serve-static@^1.13.4":
+  version "1.13.4"
+  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.4.tgz#6662a93583e5a6cabca1b23592eb91e12fa80e7c"
+  integrity sha512-jTDt0o/YbpNwZbQmE/+2e+lfjJEJJR0I3OFaKQKPWkASkCoW3i6fsUnqudSMcNAfbtmADGu8f4MV4q+GqULmug==
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/mime" "*"
+
 "@types/source-list-map@*":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
@@ -1465,6 +1513,14 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@types/terser-webpack-plugin/-/terser-webpack-plugin-2.2.0.tgz#b1561e3118b9319d80ff65798c345877669b3e12"
   integrity sha512-ywqEfTm7KdKoX9aYx0zYtiFU1z6IHrIYW9FJqeay2Ea58rTPML1J0hvoztGal2Jow3bkgGKcAmEZNL+8LqUVrA==
+  dependencies:
+    "@types/webpack" "*"
+    terser "^4.3.9"
+
+"@types/terser-webpack-plugin@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@types/terser-webpack-plugin/-/terser-webpack-plugin-2.2.1.tgz#d6687ed29026532764b031209a5d6dc6d44b33f2"
+  integrity sha512-Z/6t/7qz4LeO64owJ9x7JQ6X791qfLxp1M1eCp6hFQlj7xuB5+Ol7DpEn5kWClTARZ7GlPLRsEWzFzQjZShF6w==
   dependencies:
     "@types/webpack" "*"
     terser "^4.3.9"
@@ -1504,7 +1560,14 @@
   dependencies:
     "@types/webpack" "*"
 
-"@types/webpack-dev-middleware@^3.7.0":
+"@types/webpack-bundle-analyzer@^3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@types/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.8.0.tgz#d1f196f95159254f76a3c2283c4677585bdf354d"
+  integrity sha512-Ah6FbkXLAVUNI/ExXHsTS90iRS/Efplh333NySjhGx09oeH9qXf57NMUfl4RADTL5a89hQaq/nbT4eb0LwsQJw==
+  dependencies:
+    "@types/webpack" "*"
+
+"@types/webpack-dev-middleware@^3.7.0", "@types/webpack-dev-middleware@^3.7.1":
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/@types/webpack-dev-middleware/-/webpack-dev-middleware-3.7.1.tgz#2d4e7d9abf6eec2988476f9f8f1e9b7acb2a7f82"
   integrity sha512-+U6zP6/jlQ9Mw4zBOiuKOe/delLS4f0kvzAJCVK9wsW00hi4TD9u6TIaE5x5xy6xrkCiXMSf56bsAosORjP3/Q==
@@ -1514,7 +1577,7 @@
     "@types/webpack" "*"
     loglevel "^1.6.2"
 
-"@types/webpack-hot-middleware@^2.25.2":
+"@types/webpack-hot-middleware@^2.25.2", "@types/webpack-hot-middleware@^2.25.3":
   version "2.25.3"
   resolved "https://registry.yarnpkg.com/@types/webpack-hot-middleware/-/webpack-hot-middleware-2.25.3.tgz#ba6265ada359cae4f437d8ac08ac5b8c616f7521"
   integrity sha512-zGkTzrwQnhSadIXGYGZLu7tpXQwn4+6y9nGeql+5UeRtW/k54Jp4SnzB0Qw00ednw0ZFoZOvqTFfXSbFXohc5Q==
@@ -1535,6 +1598,18 @@
   version "4.41.13"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.13.tgz#988d114c8913d039b8a0e0502a7fe4f1f84f3d5e"
   integrity sha512-RYmIHOWSxnTTa765N6jJBVE45pd2SYNblEYshVDduLw6RhocazNmRzE5/ytvBD8IkDMH6DI+bcrqxh8NILimBA==
+  dependencies:
+    "@types/anymatch" "*"
+    "@types/node" "*"
+    "@types/tapable" "*"
+    "@types/uglify-js" "*"
+    "@types/webpack-sources" "*"
+    source-map "^0.6.0"
+
+"@types/webpack@^4.41.17":
+  version "4.41.17"
+  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.17.tgz#0a69005e644d657c85b7d6ec1c826a71bebd1c93"
+  integrity sha512-6FfeCidTSHozwKI67gIVQQ5Mp0g4X96c2IXxX75hYEQJwST/i6NyZexP//zzMOBb+wG9jJ7oO8fk9yObP2HWAw==
   dependencies:
     "@types/anymatch" "*"
     "@types/node" "*"
@@ -9177,10 +9252,10 @@ ts-loader@^6.2.2:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-ts-node@^8.9.0:
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.1.tgz#77da0366ff8afbe733596361d2df9a60fc9c9bd3"
-  integrity sha512-bdNz1L4ekHiJul6SHtZWs1ujEKERJnHs4HxN7rjTyyVOFf3HaJ6sLqe6aPG62XTzAB/63pKRh5jTSWL0D7bsvw==
+ts-node@^8.10.2:
+  version "8.10.2"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.2.tgz#eee03764633b1234ddd37f8db9ec10b75ec7fb8d"
+  integrity sha512-ISJJGgkIpDdBhWVu3jufsWpK3Rzo7bdiIXJjQc0ynKxVOVcg2oIrf2H2cejminGrptVc6q6/uynAHNCuWGbpVA==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
