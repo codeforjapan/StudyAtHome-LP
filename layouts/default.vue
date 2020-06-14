@@ -8,7 +8,7 @@
       </v-btn>
     </v-app-bar>
     <v-content>
-      <v-container pa-0>
+      <v-container fluid ma-0 pa-0>
         <nuxt />
       </v-container>
     </v-content>
