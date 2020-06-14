@@ -27,7 +27,7 @@
     text-align: center;
 
     > img {
-      margin-bottom: 1%;
+      margin-bottom: 4%;
       @include largerThan($small) {
         width: 10vw;
       }
