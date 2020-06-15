@@ -48,6 +48,9 @@ export default {
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.03em;
+    white-space: pre-wrap;
+    margin-top: -10px;
+    margin-bottom: 0;
     @include largerThan($small) {
       font-size: 25px;
     }
@@ -62,6 +65,7 @@ export default {
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 0.03em;
+    margin-bottom: -30px;
   }
 
   .Desc {
