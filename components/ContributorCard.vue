@@ -32,7 +32,7 @@ export default {
   display: inline-block;
   width: 100px;
   height: 145px;
-  > img {
+  img {
     object-fit: cover;
     border-radius: 50%;
     border: 1px solid $border-gray;
