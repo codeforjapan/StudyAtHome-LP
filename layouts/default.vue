@@ -7,7 +7,9 @@
         outlined
         rounded
         class="header-button"
-        url="https://app.studyathome.jp/"
+        href="https://app.studyathome.jp/"
+        target="_blank"
+        rel="noopener"
       >
         はじめる
       </v-btn>
