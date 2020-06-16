@@ -173,7 +173,7 @@
         <v-row class="RoundButton">
           <RoundButton
             :name="'お問い合わせはこちら'"
-            url="https://forms.gle/31Sz67tJJtGxVqpv9"
+            url="https://forms.gle/G91PJ7T8ipTtYeGA6"
           />
         </v-row>
       </template>
