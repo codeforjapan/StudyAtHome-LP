@@ -16,7 +16,11 @@
         </p>
       </v-col>
       <v-col cols="12" sm="12" md="6" lg="6">
-        <start-button class="StartButton" :name="'はじめる'" url="#" />
+        <start-button
+          class="StartButton"
+          :name="'はじめる'"
+          url="https://app.studyathome.jp/"
+        />
       </v-col>
     </v-row>
     <horizontal-photos class="HorizontalPhotos" />
@@ -70,7 +74,10 @@
           <message-effect :title="'お気軽にお試しください!'" />
         </v-row>
         <v-row class="RoundButton">
-          <RoundButton :name="'利用開始する'" url="" />
+          <RoundButton
+            :name="'利用開始する'"
+            url="https://app.studyathome.jp/"
+          />
         </v-row>
       </template>
     </back-template>
@@ -164,7 +171,10 @@
           />
         </v-row>
         <v-row class="RoundButton">
-          <RoundButton :name="'お問い合わせはこちら'" url="" />
+          <RoundButton
+            :name="'お問い合わせはこちら'"
+            url="https://forms.gle/31Sz67tJJtGxVqpv9"
+          />
         </v-row>
       </template>
     </back-template>
@@ -177,7 +187,15 @@
       :back-is-gray="false"
     >
       <template v-slot:contents>
-        <v-btn outlined rounded large class="SlackButton">
+        <v-btn
+          outlined
+          rounded
+          large
+          class="SlackButton"
+          href="https://cfjslackin.herokuapp.com/"
+          target="_blank"
+          rel="noopener"
+        >
           <img src="/svgs/slack.svg" alt="slack" /> Slackに参加する
         </v-btn>
       </template>

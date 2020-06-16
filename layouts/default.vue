@@ -3,7 +3,12 @@
     <v-app-bar app flat color="#fff">
       <img src="/svgs/logo.svg" alt="おうちで時間割" class="header-logo" />
       <v-spacer />
-      <v-btn outlined rounded class="header-button">
+      <v-btn
+        outlined
+        rounded
+        class="header-button"
+        url="https://app.studyathome.jp/"
+      >
         はじめる
       </v-btn>
     </v-app-bar>
