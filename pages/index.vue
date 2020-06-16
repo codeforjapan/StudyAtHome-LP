@@ -310,9 +310,6 @@ export default {
     font-weight: bold;
     transition: 0.3s;
     text-transform: none;
-    @include largerThan($small) {
-      margin-right: 10vw;
-    }
   }
 
   .SlackButton:hover {
