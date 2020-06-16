@@ -40,13 +40,9 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/index.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' }
+        { filePath: '/screenshot1.png' },
+        { filePath: '/screenshot2.png' },
+        { filePath: '/screenshot3.png' }
       ],
       carouselSlideWidth: null,
       carouselSlideHeight: null,
