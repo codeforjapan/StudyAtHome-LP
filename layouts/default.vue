@@ -22,17 +22,17 @@
         <v-col cols="12" sm="7" md="8" lg="9" class="footer-over">
           <v-row>
             <v-col class="footer-over-left">
-              <a href="#">
-                サイトポリシー
+              <a href="https://app.studyathome.jp/policy">
+                利用規約
               </a>
             </v-col>
             <v-col class="footer-over-center">
-              <a href="#">
+              <a href="https://forms.gle/G91PJ7T8ipTtYeGA6">
                 お問い合わせ
               </a>
             </v-col>
             <v-col class="footer-over-right">
-              <a href="#">
+              <a href="https://code4japan.org">
                 運営団体
               </a>
             </v-col>
