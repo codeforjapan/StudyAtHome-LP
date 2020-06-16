@@ -3,12 +3,17 @@
     <v-app-bar app flat color="#fff">
       <img src="/svgs/logo.svg" alt="おうちで時間割" class="header-logo" />
       <v-spacer />
-      <v-btn outlined rounded class="header-button">
+      <v-btn
+        outlined
+        rounded
+        class="header-button"
+        url="https://app.studyathome.jp/"
+      >
         はじめる
       </v-btn>
     </v-app-bar>
     <v-content>
-      <v-container pa-0>
+      <v-container fluid ma-0 pa-0>
         <nuxt />
       </v-container>
     </v-content>
@@ -17,17 +22,17 @@
         <v-col cols="12" sm="7" md="8" lg="9" class="footer-over">
           <v-row>
             <v-col class="footer-over-left">
-              <a href="#">
-                サイトポリシー
+              <a href="https://app.studyathome.jp/policy">
+                利用規約
               </a>
             </v-col>
             <v-col class="footer-over-center">
-              <a href="#">
+              <a href="https://forms.gle/G91PJ7T8ipTtYeGA6">
                 お問い合わせ
               </a>
             </v-col>
             <v-col class="footer-over-right">
-              <a href="#">
+              <a href="https://code4japan.org">
                 運営団体
               </a>
             </v-col>

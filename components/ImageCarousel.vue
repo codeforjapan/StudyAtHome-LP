@@ -1,38 +1,40 @@
 <template>
-  <div ref="carouselOuter" class="ImageCarousel-Outer">
-    <div
-      ref="carousel"
-      class="ImageCarousel"
-      :style="`width: calc(100% + ${carouselSlideWidth / 2}px)`"
-    >
-      <carousel
-        :scroll-per-page="false"
-        :navigation-enabled="true"
-        :navigation-next-label="'next →'"
-        :navigation-prev-label="'← prev'"
-        :pagination-enabled="false"
-        :per-page-custom="[
-          [600, 3],
-          [768, 5]
-        ]"
+  <client-only>
+    <div ref="carouselOuter" class="ImageCarousel-Outer">
+      <div
+        ref="carousel"
+        class="ImageCarousel"
+        :style="`width: calc(100% + ${carouselSlideWidth / 2}px)`"
       >
-        <slide
-          v-for="(item, index) in items"
-          :key="index"
-          class="ImageCarousel-Slide"
+        <carousel
+          :scroll-per-page="false"
+          :navigation-enabled="true"
+          :navigation-next-label="'next →'"
+          :navigation-prev-label="'← prev'"
+          :pagination-enabled="false"
+          :per-page-custom="[
+            [600, 3],
+            [768, 5]
+          ]"
         >
-          <img ref="carouselImg" :src="item.filePath" alt="" />
-        </slide>
-        <slide class="ImageCarousel-Slide">
-          <div
-            :style="
-              `width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`
-            "
-          />
-        </slide>
-      </carousel>
+          <slide
+            v-for="(item, index) in items"
+            :key="index"
+            class="ImageCarousel-Slide"
+          >
+            <img ref="carouselImg" :src="item.filePath" alt="" />
+          </slide>
+          <slide class="ImageCarousel-Slide">
+            <div
+              :style="
+                `width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`
+              "
+            />
+          </slide>
+        </carousel>
+      </div>
     </div>
-  </div>
+  </client-only>
 </template>
 
 <script>
@@ -40,13 +42,9 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/index.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' },
-        { filePath: '/page-2.jpg' }
+        { filePath: '/screenshot1.png' },
+        { filePath: '/screenshot2.png' },
+        { filePath: '/screenshot3.png' }
       ],
       carouselSlideWidth: null,
       carouselSlideHeight: null,
@@ -95,6 +93,7 @@ export default {
 <style lang="scss">
 .ImageCarousel-Outer {
   overflow: hidden;
+  height: 860px;
 }
 .ImageCarousel-Slide {
   padding-right: 8px;

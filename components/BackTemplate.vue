@@ -4,6 +4,7 @@
     <p :class="[subTitle ? 'MainTitle' : 'MainTitle-NoSubTitle']">
       {{ title }}
     </p>
+    <p v-if="desc" class="Desc">{{ desc }}</p>
     <slot name="contents" />
   </div>
 </template>
@@ -16,6 +17,11 @@ export default {
       required: true
     },
     subTitle: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    desc: {
       type: String,
       required: false,
       default: ''
@@ -42,6 +48,9 @@ export default {
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.03em;
+    white-space: pre-wrap;
+    margin-top: -10px;
+    margin-bottom: 0;
     @include largerThan($small) {
       font-size: 25px;
     }
@@ -56,6 +65,15 @@ export default {
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 0.03em;
+    margin-bottom: -30px;
+  }
+
+  .Desc {
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    line-height: 150%;
+    white-space: pre-wrap;
   }
 }
 

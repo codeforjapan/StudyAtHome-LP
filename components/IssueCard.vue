@@ -32,6 +32,10 @@ export default {
   color: $base-gray;
   background-color: $light-gray;
 
+  @include largerThan($small) {
+    margin: 16px 0 16px 0;
+  }
+
   &-Title {
     margin-top: 29px;
     margin-bottom: 24px;

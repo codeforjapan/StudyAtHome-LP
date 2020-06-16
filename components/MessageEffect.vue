@@ -1,7 +1,7 @@
 <template>
   <div class="MessageEffect">
     <span class="Rotate RotateLeft" />
-    <span class="Message">{{ name }}</span>
+    <span class="Message">{{ title }}</span>
     <span class="Rotate RotateRight" />
   </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
 export default {
   props: {
-    name: {
+    title: {
       type: String,
       required: true
     }
@@ -18,6 +18,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .MessageEffect {
+  margin-left: auto;
+  margin-right: auto;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
