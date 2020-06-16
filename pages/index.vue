@@ -223,6 +223,7 @@ export default {
 
   font-style: normal;
   font-weight: bold;
+  overflow: hidden;
 
   .Title {
     .MainTitle {
