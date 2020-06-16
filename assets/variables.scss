@@ -1,8 +1,31 @@
-// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-//
-// The variables you want to modify
-// $font-size-root: 20px;
 // ==================
 // color
-$base-blue: #0071C2;
-$white:#FFFFFF;
+$base-blue: #0071c2;
+$base-yellow: #ffdb6c;
+$base-gray: #333333;
+$dark-gray: #424242;
+$light-gray: #fafafa;
+$border-gray: #f3f3f4;
+$white: #ffffff;
+
+// ==================
+// break-points
+$huge: 1903;
+$large: 1263;
+$medium: 959;
+$small: 600;
+$tiny: 380;
+
+// ==================
+// media-query
+@mixin largerThan($width) {
+  @media screen and (min-width: $width + 1 + px) {
+    @content;
+  }
+}
+
+@mixin lessThan($width) {
+  @media screen and (max-width: $width + px) {
+    @content;
+  }
+}

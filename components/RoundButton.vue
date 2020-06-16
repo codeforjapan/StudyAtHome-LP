@@ -1,5 +1,7 @@
 <template>
-  <v-btn rounded :href="url">{{ name }}</v-btn>
+  <v-btn rounded x-large :href="url" target="_blank" rel="noopener">{{
+    name
+  }}</v-btn>
 </template>
 
 <script>
@@ -19,12 +21,12 @@ export default {
 
 <style lang="scss" scoped>
 .v-btn {
+  margin-left: auto;
+  margin-right: auto;
   background-color: $base-blue !important;
   color: $white;
   width: 200px;
-  height: 48px;
   transition: 0.3s;
-  font-family: Noto Sans CJK JP;
   font-weight: bold;
   font-size: 15px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <v-card flat class="ContriCard">
+  <v-card flat class="ContriCard" color="#ffffff00">
     <v-avatar size="100px">
       <img :src="iconPath" />
     </v-avatar>
@@ -32,10 +32,10 @@ export default {
   display: inline-block;
   width: 100px;
   height: 145px;
-  > img {
+  img {
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid #f3f3f4;
+    border: 1px solid $border-gray;
     box-sizing: border-box;
   }
 }
