@@ -1,6 +1,9 @@
 version: 0.2
 
 phases:
+  yarn_install:
+    commands:
+      - npm install -g yarn
   pre_build:
     commands:
       - if [ -e /tmp/node_modules.tar ]; then tar xf /tmp/node_modules.tar; fi
