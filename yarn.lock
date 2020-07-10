@@ -1120,16 +1120,16 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^4.0.0"
 
-"@nuxtjs/axios@^5.3.6":
-  version "5.10.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.10.3.tgz#1d249cafab805787788b655b40cee8a3838ded79"
-  integrity sha512-cCPeix6S0yLftiTnD9cpZSDsCNYD5/5EB9Q9iB8WaNZsGMPcwM5XQQVFcenMIv9Dr+SvySdOUdDL9rvlfyhdkg==
+"@nuxtjs/axios@^5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.12.0.tgz#50692340e64ec838f167d292d59b1cc2a0e2dbef"
+  integrity sha512-VQI9Nnf12jWknldrgCNGzCQxnWO3/CvMwrkWKNUr3WtGYuOKryUOd1XXxDbaJmopfX4SGjKvDL1G6qTkWLiPew==
   dependencies:
-    "@nuxtjs/proxy" "^1.3.3"
+    "@nuxtjs/proxy" "^2.0.0"
     axios "^0.19.2"
     axios-retry "^3.1.8"
-    consola "^2.11.3"
-    defu "^2.0.2"
+    consola "^2.14.0"
+    defu "^2.0.4"
 
 "@nuxtjs/dotenv@^1.4.0":
   version "1.4.1"
@@ -1170,13 +1170,13 @@
     consola "^2.11.3"
     eslint-loader "^4.0.2"
 
-"@nuxtjs/proxy@^1.3.3":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-1.3.3.tgz#3de3d9f073e8e57167168100940be2a824a220e0"
-  integrity sha512-ykpCUdOqPOH79mQG30QfWZmbRD8yjTD+TTSBbwow5GkROUQEtXw+HE+q6i+YFpuChvgJNbwVrXdZ3YmfXbZtTw==
+"@nuxtjs/proxy@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.0.0.tgz#cf19894eac721a2ad896293f241371f046db71e7"
+  integrity sha512-ewiOLAhfQlE/QWiQkHH0MQBYrtTRRSuz5SqDly1Zy/M3cN9bxqWd9d5Ty/GnU3nLtwsfW64TrRKuTw8/gT1nFQ==
   dependencies:
-    consola "^2.5.6"
-    http-proxy-middleware "^0.19.1"
+    consola "^2.11.3"
+    http-proxy-middleware "^1.0.4"
 
 "@nuxtjs/pwa@^3.0.0-0":
   version "3.0.0-beta.20"
@@ -1371,6 +1371,13 @@
     "@types/clean-css" "*"
     "@types/relateurl" "*"
     "@types/uglify-js" "*"
+
+"@types/http-proxy@^1.17.4":
+  version "1.17.4"
+  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.4.tgz#e7c92e3dbe3e13aa799440ff42e6d3a17a9d045b"
+  integrity sha512-IrSHl2u6AWXduUaDLqYpt45tLVCtYv7o4Z0s1KghBCDgIIS9oW5K1H8mZG/A2CfeLdEa7rTd1ACOiHBc1EMT2Q==
+  dependencies:
+    "@types/node" "*"
 
 "@types/json-schema@^7.0.3":
   version "7.0.4"
@@ -3002,10 +3009,10 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
-consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.13.0, consola@^2.5.6, consola@^2.6.0, consola@^2.9.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/consola/-/consola-2.13.0.tgz#5a4dc75e1b1fddbd8b10728e7790a2e54efeeeb7"
-  integrity sha512-Jw+8qpL0yrpfqH9m90fWoDRQyn8TYU6Aegpl4UofoP81VYvQLoOWMpFw2vQ3U/cyLRRzTc/CyNC6YYVzZFU8Eg==
+consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.13.0, consola@^2.14.0, consola@^2.6.0, consola@^2.9.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.14.0.tgz#162ee903b6c9c4de25077d93f34ab902ebcb4dac"
+  integrity sha512-A2j1x4u8d6SIVikhZROfpFJxQZie+cZOfQMyI/tu2+hWXe8iAv7R6FW6s6x04/7zBCst94lPddztot/d6GJiuQ==
 
 console-browserify@^1.1.0:
   version "1.2.0"
@@ -3506,10 +3513,10 @@ defu@^1.0.0:
   resolved "https://registry.yarnpkg.com/defu/-/defu-1.0.0.tgz#43acb09dfcf81866fa3b0fc047ece18e5c30df71"
   integrity sha512-1Y1KRFxiiq+LYsZ3iP7xYSR8bHfmHFOUpDunZCN1ld1fGfDJWJIvkUBtjl3apnBwPuJtL/H7cwwlLYX8xPkraQ==
 
-defu@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/defu/-/defu-2.0.2.tgz#9a3d4c1330d60c0ed4812e51864b948c51f7ad45"
-  integrity sha512-E5dO3ji0TmVcZaB/2G6Ovu5zNHbWkgCU7v+EoE/Jj1Lbwv1BB6hNNKLkio2ZLI3/e3avlO634QUhQl4iCpm3Bg==
+defu@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-2.0.4.tgz#09659a6e87a8fd7178be13bd43e9357ebf6d1c46"
+  integrity sha512-G9pEH1UUMxShy6syWk01VQSRVs3CDWtlxtZu7A+NyqjxaCA4gSlWAKDBx6QiUEKezqS8+DUlXLI14Fp05Hmpwg==
 
 depd@~1.1.2:
   version "1.1.2"
@@ -4993,20 +5000,21 @@ http-errors@~1.7.2:
     statuses ">= 1.5.0 < 2"
     toidentifier "1.0.0"
 
-http-proxy-middleware@^0.19.1:
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.19.1.tgz#183c7dc4aa1479150306498c210cdaf96080a43a"
-  integrity sha512-yHYTgWMQO8VvwNS22eLLloAkvungsKdKTLO8AJlftYIKNfJr3GK3zK0ZCfzDDGUBttdGc8xFy1mCitvNKQtC3Q==
+http-proxy-middleware@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.0.5.tgz#4c6e25d95a411e3d750bc79ccf66290675176dc2"
+  integrity sha512-CKzML7u4RdGob8wuKI//H8Ein6wNTEQR7yjVEzPbhBLGdOfkfvgTnp2HLnniKBDP9QW4eG10/724iTWLBeER3g==
   dependencies:
-    http-proxy "^1.17.0"
-    is-glob "^4.0.0"
-    lodash "^4.17.11"
-    micromatch "^3.1.10"
+    "@types/http-proxy" "^1.17.4"
+    http-proxy "^1.18.1"
+    is-glob "^4.0.1"
+    lodash "^4.17.19"
+    micromatch "^4.0.2"
 
-http-proxy@^1.17.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.18.0.tgz#dbe55f63e75a347db7f3d99974f2692a314a6a3a"
-  integrity sha512-84I2iJM/n1d4Hdgc6y2+qY5mDaz2PUVjlg9znE9byl+q0uC3DeByqBGReQu5tpLK0TAqTIXScRUV+dg7+bUPpQ==
+http-proxy@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.18.1.tgz#401541f0534884bbf95260334e72f88ee3976549"
+  integrity sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==
   dependencies:
     eventemitter3 "^4.0.0"
     follow-redirects "^1.0.0"
@@ -5874,6 +5882,11 @@ lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4.17.19:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@^2.2.0:
   version "2.2.0"
