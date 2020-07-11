@@ -42,8 +42,8 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/screenshot1.png' },
-        { filePath: '/screenshot2.png' },
+        { filePath: '/start_page.png' },
+        { filePath: '/owner-page-0.png' },
         { filePath: '/screenshot3.png' }
       ],
       carouselSlideWidth: null,
