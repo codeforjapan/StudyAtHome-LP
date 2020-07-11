@@ -22,7 +22,10 @@
             :key="index"
             class="ImageCarousel-Slide"
           >
-            <img ref="carouselImg" :src="item.filePath" alt="" />
+            <picture ref="carouselImg">
+              <source type="image/webp" :srcset="item.webpPath" />
+              <img :src="item.filePath" alt="" />
+            </picture>
           </slide>
           <slide class="ImageCarousel-Slide">
             <div
@@ -42,9 +45,9 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/start_page.png' },
-        { filePath: '/owner-page-0.png' },
-        { filePath: '/screenshot3.png' }
+        { filePath: '/start_page.png', webpPath: '/start_page.webp' },
+        { filePath: '/owner-page-0.png', webpPath: '/owner-page-0.webp' },
+        { filePath: '/screenshot3.png', webpPath: '/screenshot3.webp' }
       ],
       carouselSlideWidth: null,
       carouselSlideHeight: null,
