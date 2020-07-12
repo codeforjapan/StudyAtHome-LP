@@ -1,7 +1,10 @@
 <template>
   <v-card flat class="ContriCard" color="#ffffff00">
     <v-avatar size="100px">
-      <img :src="iconPath" />
+      <picture>
+        <source type="image/webp" :srcset="webpPath" />
+        <img :src="iconPath" />
+      </picture>
     </v-avatar>
     <span class="ContriText ContriName">{{ name }}</span>
     <span class="ContriText ContriRole">{{ role }}</span>
@@ -12,6 +15,10 @@
 export default {
   props: {
     iconPath: {
+      type: String,
+      required: true
+    },
+    webpPath: {
       type: String,
       required: true
     },
@@ -32,7 +39,7 @@ export default {
   display: inline-block;
   width: 100px;
   height: 145px;
-  img {
+  picture {
     object-fit: cover;
     border-radius: 50%;
     border: 1px solid $border-gray;

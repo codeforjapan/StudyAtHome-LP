@@ -28,7 +28,7 @@
       :title="'こんな課題ありませんか?'"
       :items="[
         '急な休校で授業準備がやり直しに...',
-        '分散当行の準備などで大変',
+        '分散登校の準備などで大変',
         '学校での授業と家庭学習をもっと連動した学びにしたい'
       ]"
     />
@@ -100,10 +100,7 @@
     <back-template :title="'おうちで時間割チーム'" :back-is-gray="true">
       <template v-slot:contents>
         <v-row>
-          <image-card
-            img-path="/svgs/cfj_logo.svg"
-            url="https://code4japan.org"
-          />
+          <image-card img-path="/CfJLogo.png" url="https://code4japan.org" />
         </v-row>
         <v-row class="Contributors">
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -111,6 +108,7 @@
               :name="'武貞 真未'"
               :role="'企画・広報'"
               icon-path="/takesada.png"
+              webp-path="/takesada.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -118,6 +116,7 @@
               :name="'林 敬子'"
               :role="'UIUXデザイナー'"
               icon-path="/hayashi.png"
+              webp-path="/hayashi.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -125,6 +124,7 @@
               :name="'吉沢 太祐'"
               :role="'エンジニア'"
               icon-path="/yoshizawa.png"
+              webp-path="/yoshizawa.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -132,6 +132,7 @@
               :name="'福田 せいじ'"
               :role="'エンジニア'"
               icon-path="/fukuda.png"
+              webp-path="/fukuda.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -139,6 +140,7 @@
               :name="'渡邊 響'"
               :role="'エンジニア'"
               icon-path="/watanabe.png"
+              webp-path="/watanabe.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -146,6 +148,7 @@
               :name="'芦田 裕飛'"
               :role="'エンジニア'"
               icon-path="/ashida.png"
+              webp-path="/ashida.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -153,6 +156,7 @@
               :name="'池田 達哉'"
               :role="'エンジニア'"
               icon-path="/ikeda.png"
+              webp-path="/ikeda.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -160,6 +164,7 @@
               :name="'大杉 洸輝'"
               :role="'デザイナー'"
               icon-path="/osugi.png"
+              webp-path="/osugi.webp"
             />
           </v-col>
         </v-row>
@@ -196,42 +201,16 @@
           target="_blank"
           rel="noopener"
         >
-          <img src="/svgs/slack.svg" alt="slack" /> Slackに参加する
+          <picture>
+            <source type="image/webp" srcset="/Slack_Mark_Web.webp" />
+            <img src="/Slack_Mark_Web.png" alt="slack" />
+          </picture>
+          Slackに参加する
         </v-btn>
       </template>
     </back-template>
   </div>
 </template>
-
-<script>
-import CircleLogo from '@/components/CircleLogo.vue'
-import StartButton from '@/components/StartButton.vue'
-import HorizontalPhotos from '@/components/HorizontalPhotos'
-import IssueCard from '@/components/IssueCard.vue'
-import BackTemplate from '@/components/BackTemplate.vue'
-import IconCard from '@/components/IconCard.vue'
-import MessageEffect from '@/components/MessageEffect.vue'
-import RoundButton from '@/components/RoundButton.vue'
-import ImageCarousel from '@/components/ImageCarousel.vue'
-import ImageCard from '@/components/ImageCard.vue'
-import ContributorCard from '@/components/ContributorCard.vue'
-
-export default {
-  components: {
-    CircleLogo,
-    StartButton,
-    HorizontalPhotos,
-    IssueCard,
-    BackTemplate,
-    IconCard,
-    MessageEffect,
-    RoundButton,
-    ImageCarousel,
-    ImageCard,
-    ContributorCard
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .Index {
@@ -328,6 +307,9 @@ export default {
     font-weight: bold;
     transition: 0.3s;
     text-transform: none;
+    img {
+      height: 48px;
+    }
   }
 
   .SlackButton:hover {
