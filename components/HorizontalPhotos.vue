@@ -6,7 +6,14 @@
         :key="index"
         class="HorizontalPhotos-Item"
       >
-        <img :src="item.filePath" alt="" class="HorizontalPhotos-Img" />
+        <picture>
+          <source
+            type="image/webp"
+            :srcset="item.webpPath"
+            class="HorizontalPhotos-Img"
+          />
+          <img :src="item.filePath" alt="" class="HorizontalPhotos-Img" />
+        </picture>
       </li>
     </ul>
   </div>
@@ -17,9 +24,9 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/image01.jpg' },
-        { filePath: '/image02.jpg' },
-        { filePath: '/image03.jpg' }
+        { filePath: '/image01.jpg', webpPath: '/image01.webp' },
+        { filePath: '/image02.jpg', webpPath: '/image02.webp' },
+        { filePath: '/image03.jpg', webpPath: '/image03.webp' }
       ]
     }
   }

@@ -2,6 +2,11 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   mode: 'universal',
+  target: 'static',
+  /*
+   ** Headers of the page
+   ** See https://nuxtjs.org/api/configuration-head
+   */
   /*
    ** Headers of the page
    */
@@ -67,6 +72,12 @@ export default {
         content: 'http://www.studyathome.jp/ogp.png'
       }
     ],
+    script: [
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon-precomposed.png' }
@@ -84,11 +95,13 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [{ src: '~plugins/vue-carousel', mode: 'client' }],
+  components: true,
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     '@nuxt/typescript-build',
+    '@nuxt/components',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify'
