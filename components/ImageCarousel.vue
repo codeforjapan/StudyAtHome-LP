@@ -46,7 +46,10 @@ export default {
     return {
       items: [
         { filePath: '/screen_top.png', webpPath: '/screen_top.webp' },
-        { filePath: '/screen_timetable.png', webpPath: '/screen_timetable.webp' },
+        {
+          filePath: '/screen_timetable.png',
+          webpPath: '/screen_timetable.webp'
+        },
         { filePath: '/screen_contents.png', webpPath: '/screen_contents.webp' },
         { filePath: '/screen_calendar.png', webpPath: '/screen_calendar.webp' }
       ],
