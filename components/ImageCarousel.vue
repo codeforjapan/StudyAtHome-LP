@@ -14,7 +14,7 @@
           :pagination-enabled="false"
           :per-page-custom="[
             [600, 3],
-            [768, 5]
+            [768, 4]
           ]"
         >
           <slide
@@ -45,9 +45,13 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/start_page.png', webpPath: '/start_page.webp' },
-        { filePath: '/owner-page-0.png', webpPath: '/owner-page-0.webp' },
-        { filePath: '/screenshot3.png', webpPath: '/screenshot3.webp' }
+        { filePath: '/screen_top.png', webpPath: '/screen_top.webp' },
+        {
+          filePath: '/screen_timetable.png',
+          webpPath: '/screen_timetable.webp'
+        },
+        { filePath: '/screen_contents.png', webpPath: '/screen_contents.webp' },
+        { filePath: '/screen_calendar.png', webpPath: '/screen_calendar.webp' }
       ],
       carouselSlideWidth: null,
       carouselSlideHeight: null,
@@ -96,7 +100,7 @@ export default {
 <style lang="scss">
 .ImageCarousel-Outer {
   overflow: hidden;
-  height: 860px;
+  height: auto;
 }
 .ImageCarousel-Slide {
   padding-right: 8px;
