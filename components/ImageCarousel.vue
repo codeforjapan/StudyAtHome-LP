@@ -14,7 +14,7 @@
           :pagination-enabled="false"
           :per-page-custom="[
             [600, 3],
-            [768, 4]
+            [768, 4],
           ]"
         >
           <slide
@@ -29,9 +29,7 @@
           </slide>
           <slide class="ImageCarousel-Slide">
             <div
-              :style="
-                `width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`
-              "
+              :style="`width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`"
             />
           </slide>
         </carousel>
@@ -48,14 +46,14 @@ export default {
         { filePath: '/screen_top.png', webpPath: '/screen_top.webp' },
         {
           filePath: '/screen_timetable.png',
-          webpPath: '/screen_timetable.webp'
+          webpPath: '/screen_timetable.webp',
         },
         { filePath: '/screen_contents.png', webpPath: '/screen_contents.webp' },
-        { filePath: '/screen_calendar.png', webpPath: '/screen_calendar.webp' }
+        { filePath: '/screen_calendar.png', webpPath: '/screen_calendar.webp' },
       ],
       carouselSlideWidth: null,
       carouselSlideHeight: null,
-      carouselSlideImgHeight: null
+      carouselSlideImgHeight: null,
     }
   },
   mounted() {
@@ -92,8 +90,8 @@ export default {
       )[0]
       navigation.style.width = `${carouselOuter.clientWidth}px`
       carouselInner.style.height = 'initial'
-    }
-  }
+    },
+  },
 }
 </script>
 

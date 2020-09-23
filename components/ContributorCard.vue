@@ -16,21 +16,21 @@ export default {
   props: {
     iconPath: {
       type: String,
-      required: true
+      required: true,
     },
     webpPath: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
+      required: true,
     },
     role: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

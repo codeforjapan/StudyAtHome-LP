@@ -14,24 +14,24 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     subTitle: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
     desc: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
     backIsGray: {
       type: Boolean,
       required: false,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>
 
