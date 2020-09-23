@@ -17,17 +17,17 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     iconName: {
       type: String,
-      required: true
+      required: true,
     },
     desc: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

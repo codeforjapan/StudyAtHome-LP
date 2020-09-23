@@ -26,10 +26,10 @@ export default {
       items: [
         { filePath: '/image01.jpg', webpPath: '/image01.webp' },
         { filePath: '/image02.jpg', webpPath: '/image02.webp' },
-        { filePath: '/image03.jpg', webpPath: '/image03.webp' }
-      ]
+        { filePath: '/image03.jpg', webpPath: '/image03.webp' },
+      ],
     }
-  }
+  },
 }
 </script>
 

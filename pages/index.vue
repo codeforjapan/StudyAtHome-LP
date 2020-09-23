@@ -29,15 +29,13 @@
       :items="[
         '急な休校で授業準備がやり直しに...',
         '分散登校の準備などで大変',
-        '学校での授業と家庭学習をもっと連動した学びにしたい'
+        '学校での授業と家庭学習をもっと連動した学びにしたい',
       ]"
     />
     <back-template
       :title="'おうちの時間割でできること'"
       :sub-title="'How it works?'"
-      :desc="
-        '家庭学習用の時間割が簡単に作れて、子どもたちも\nスマホで簡単に見ることができます'
-      "
+      :desc="'家庭学習用の時間割が簡単に作れて、子どもたちも\nスマホで簡単に見ることができます'"
       :back-is-gray="false"
     >
       <template v-slot:contents>
@@ -46,27 +44,21 @@
             <icon-card
               :title="'学習計画表・時間割を\nかんたんに作成'"
               :icon-name="'mdi-calendar-text-outline'"
-              :desc="
-                '家庭学習中の子どもたちにむけて時間割を\n簡単に作成して共有できる'
-              "
+              :desc="'家庭学習中の子どもたちにむけて時間割を\n簡単に作成して共有できる'"
             />
           </v-col>
           <v-col cols="12" sm="12" md="4" lg="4">
             <icon-card
               :title="'学習教材や課題も合わせて\n生徒に届けられる'"
               :icon-name="'mdi-clipboard-text-multiple-outline'"
-              :desc="
-                'NHK for schoolの動画を\n時間割に紐付けて共有できるので\n生徒が勉強方法に困らない!'
-              "
+              :desc="'NHK for schoolの動画を\n時間割に紐付けて共有できるので\n生徒が勉強方法に困らない!'"
             />
           </v-col>
           <v-col cols="12" sm="12" md="4" lg="4">
             <icon-card
               :title="'家庭学習もスマホ・PCを\n使ってらくらく'"
               :icon-name="'mdi-cellphone-sound'"
-              :desc="
-                '生徒はスマホやPCを利用して\n時間割や課題を確認できるので\n家庭学習でも安心!'
-              "
+              :desc="'生徒はスマホやPCを利用して\n時間割や課題を確認できるので\n家庭学習でも安心!'"
             />
           </v-col>
         </v-row>
@@ -92,9 +84,7 @@
     </back-template>
     <back-template
       :title="'データ提供'"
-      :desc="
-        '時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'
-      "
+      :desc="'時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'"
       :back-is-gray="false"
     />
     <back-template :title="'おうちで時間割チーム'" :back-is-gray="true">
@@ -170,9 +160,7 @@
         </v-row>
         <v-row class="MessageEffect">
           <message-effect
-            :title="
-              'おうちで時間割について質問等があれば\n気軽にお問い合わせください!'
-            "
+            :title="'おうちで時間割について質問等があれば\n気軽にお問い合わせください!'"
           />
         </v-row>
         <v-row class="RoundButton">
@@ -186,9 +174,7 @@
     <back-template
       :title="'私達と一緒におうちで時間割を\n作っていきませんか？'"
       :sub-title="'Join us'"
-      :desc="
-        'おうちで時間割は、学びのオープンデータ・\nオープンソース化を目指しています。\n開発元であるCode for Japanはさらなる機能充実の\nため、技術者を募集しております。\nまずは気軽にSlackチャンネルにご参加ください。'
-      "
+      :desc="'おうちで時間割は、学びのオープンデータ・\nオープンソース化を目指しています。\n開発元であるCode for Japanはさらなる機能充実の\nため、技術者を募集しております。\nまずは気軽にSlackチャンネルにご参加ください。'"
       :back-is-gray="false"
     >
       <template v-slot:contents>
