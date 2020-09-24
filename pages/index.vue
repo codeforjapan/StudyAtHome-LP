@@ -92,7 +92,7 @@
         <v-row>
           <image-card img-path="/CfJLogo.png" url="https://code4japan.org" />
         </v-row>
-        <v-row class="Contributors">
+        <v-row class="Contributors" justify="center">
           <v-col cols="4" sm="4" md="3" lg="3">
             <contributor-card
               :name="'武貞 真未'"
@@ -155,6 +155,35 @@
               :role="'デザイナー'"
               icon-path="/osugi.png"
               webp-path="/osugi.webp"
+            />
+          </v-col>
+        </v-row>
+        <v-row>
+          <image-card img-path="/IL_logo.svg" url="https://info-lounge.jp/" />
+        </v-row>
+        <v-row class="Contributors" justify="center">
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'肥田野 正輝'"
+              :role="'エンジニア'"
+              icon-path="/IL_hidano.png"
+              webp-path="/IL_hidano.webp"
+            />
+          </v-col>
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'伊藤 宗太'"
+              :role="'エンジニア'"
+              icon-path="/IL_itou.png"
+              webp-path="/IL_itou.webp"
+            />
+          </v-col>
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'今村 かずき'"
+              :role="'エンジニア'"
+              icon-path="/IL_imamura.png"
+              webp-path="/IL_imamura.webp"
             />
           </v-col>
         </v-row>
