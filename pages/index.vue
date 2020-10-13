@@ -89,7 +89,10 @@
     >
       <template v-slot:contents>
         <v-row>
-          <image-card img-path="/NfS_logo.png" url="https://www.nhk.or.jp/school/" />
+          <image-card
+            img-path="/NfS_logo.png"
+            url="https://www.nhk.or.jp/school/"
+          />
         </v-row>
       </template>
     </back-template>
