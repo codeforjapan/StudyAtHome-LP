@@ -1,12 +1,12 @@
 <template>
-  <div :class="[backIsGray ? 'GrayBackGround' : 'WhiteBackGround']">
-    <p v-if="subTitle" class="SubTitle">{{ subTitle }}</p>
-    <p :class="[subTitle ? 'MainTitle' : 'MainTitle-NoSubTitle']">
-      {{ title }}
-    </p>
+  <section :class="[backIsGray ? 'GrayBackGround' : 'WhiteBackGround']">
+    <header>
+      <span v-if="subTitle" class="SubTitle">{{ subTitle }}</span>
+      <h2 class="MainTitle">{{ title }}</h2>
+    </header>
     <p v-if="desc" class="Desc">{{ desc }}</p>
     <slot name="contents" />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -43,21 +43,14 @@ export default {
   color: $base-gray;
   text-align: center;
 
-  .MainTitle,
-  .MainTitle-NoSubTitle {
+  .MainTitle {
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 0.03em;
-    white-space: pre-wrap;
-    margin-top: -10px;
-    margin-bottom: 0;
+    padding: 10px 0 25px;
     @include largerThan($small) {
       font-size: 25px;
     }
-  }
-
-  .MainTitle-NoSubTitle {
-    margin-top: 50px;
   }
 
   .SubTitle {
@@ -65,7 +58,6 @@ export default {
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 0.03em;
-    margin-bottom: -30px;
   }
 
   .Desc {
