@@ -86,7 +86,13 @@
       :title="'データ提供'"
       :desc="'時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'"
       :back-is-gray="false"
-    />
+    >
+      <template v-slot:contents>
+        <v-row>
+          <image-card img-path="/NfS_logo.png" url="https://www.nhk.or.jp/school/" />
+        </v-row>
+      </template>
+    </back-template>
     <back-template :title="'おうちで時間割チーム'" :back-is-gray="true">
       <template v-slot:contents>
         <v-row>
