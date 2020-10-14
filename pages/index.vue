@@ -86,13 +86,22 @@
       :title="'データ提供'"
       :desc="'時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'"
       :back-is-gray="false"
-    />
+    >
+      <template v-slot:contents>
+        <v-row>
+          <image-card
+            img-path="/NfS_logo.png"
+            url="https://www.nhk.or.jp/school/"
+          />
+        </v-row>
+      </template>
+    </back-template>
     <back-template :title="'おうちで時間割チーム'" :back-is-gray="true">
       <template v-slot:contents>
         <v-row>
           <image-card img-path="/CfJLogo.png" url="https://code4japan.org" />
         </v-row>
-        <v-row class="Contributors">
+        <v-row class="Contributors" justify="center">
           <v-col cols="4" sm="4" md="3" lg="3">
             <contributor-card
               :name="'武貞 真未'"
@@ -155,6 +164,35 @@
               :role="'デザイナー'"
               icon-path="/osugi.png"
               webp-path="/osugi.webp"
+            />
+          </v-col>
+        </v-row>
+        <v-row>
+          <image-card img-path="/IL_logo.svg" url="https://info-lounge.jp/" />
+        </v-row>
+        <v-row class="Contributors" justify="center">
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'肥田野 正輝'"
+              :role="'エンジニア'"
+              icon-path="/IL_hidano.png"
+              webp-path="/IL_hidano.webp"
+            />
+          </v-col>
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'伊藤 宗太'"
+              :role="'エンジニア'"
+              icon-path="/IL_itou.png"
+              webp-path="/IL_itou.webp"
+            />
+          </v-col>
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'今村 かずき'"
+              :role="'エンジニア'"
+              icon-path="/IL_imamura.png"
+              webp-path="/IL_imamura.webp"
             />
           </v-col>
         </v-row>
