@@ -25,6 +25,27 @@
         <nuxt-content class="NewsArticle-Body" :document="article" />
       </article>
     </v-col>
+    <v-col cols="12">
+      <div>
+        <v-breadcrumbs class="Breadcrumb" divider=">" :items="breadcrumbItems">
+          <template #item="{ item }">
+            <v-breadcrumbs-item
+              :exact="item.exact"
+              :to="item.to"
+              :disabled="item.disabled"
+            >
+              <template v-if="item.to === '/'">
+                <v-icon color="#0071c2" size="24px">mdi-home</v-icon
+                ><span class="Breadcrumb-Label pl-1">{{ item.text }}</span>
+              </template>
+              <template v-else>
+                <span class="Breadcrumb-Label">{{ item.text }}</span>
+              </template>
+            </v-breadcrumbs-item>
+          </template>
+        </v-breadcrumbs>
+      </div>
+    </v-col>
   </v-row>
 </template>
 
@@ -33,8 +54,17 @@ import Vue from 'vue'
 import dayjs from 'dayjs'
 import { IContentDocument } from '@nuxt/content/types/content'
 
+type BreadcrumbItem = {
+  disabled: boolean
+  exact: boolean
+  link: boolean
+  text: string | number
+  to: string | object
+}
+
 type Data = {
   article: IContentDocument | null
+  breadcrumbItems: BreadcrumbItem[]
 }
 
 type Methods = {
@@ -43,15 +73,36 @@ type Methods = {
 
 export default Vue.extend<Data, Methods, unknown, unknown>({
   async asyncData({ $content, params }) {
-    const article = await $content('news', params.id).fetch()
+    const article = (await $content(
+      'news',
+      params.id
+    ).fetch()) as IContentDocument
 
     return {
       article,
+      breadcrumbItems: [
+        {
+          exact: true,
+          text: 'TOP',
+          to: '/',
+        },
+        {
+          exact: true,
+          text: '最新情報',
+          to: '/news/',
+        },
+        {
+          exact: true,
+          text: article.title,
+          to: article.path,
+        },
+      ],
     }
   },
   data() {
     return {
       article: null,
+      breadcrumbItems: [],
     }
   },
   methods: {
@@ -101,6 +152,20 @@ export default Vue.extend<Data, Methods, unknown, unknown>({
     margin: 25px 0 8px 0;
     font-size: 16px;
     letter-spacing: 0.03em;
+  }
+}
+
+.Breadcrumb {
+  display: inline-flex;
+  padding: {
+    top: 0;
+    bottom: 0;
+  }
+
+  span {
+    font-size: 15px;
+    font-weight: 600;
+    vertical-align: bottom;
   }
 }
 </style>
