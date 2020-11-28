@@ -1,73 +1,61 @@
 <template>
-  <v-layout column>
-    <article>
-      <div class="newsDetails">
-        <span class="createdAt">
-          <time datetime="item.createdAt">
-            {{ formatDate(item.createdAt) }}
-          </time>
-        </span>
-        <h1 class="newsTitle">{{ item.title }}</h1>
-      </div>
-      <v-img :src="item.thumbnail.url" alt="" />
+  <v-row class="NewsArticle-Container" justify="center" align="center">
+    <v-col cols="12">
+      <article v-if="article">
+        <div class="NewsArticle-Details">
+          <span class="NewsArticle-Details-DateTime">
+            <time :datetime="article.createdAt">
+              {{ formatDate(article.createdAt) }}
+            </time>
+          </span>
+          <h1 class="NewsArticle-Details-Title">
+            {{ article.title }}
+          </h1>
+        </div>
+        <v-img
+          class="mx-auto my-3"
+          :src="`/news/${article.thumbnailFilename}`"
+          alt=""
+          :aspect-ratio="340 / 200"
+          max-height="469"
+          max-width="798"
+          contain
+        />
 
-      <div class="newsContent" v-html="item.content" />
-    </article>
-  </v-layout>
+        <nuxt-content class="NewsArticle-Body" :document="article" />
+      </article>
+    </v-col>
+  </v-row>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import { Context } from '@nuxt/types'
-import axios from 'axios'
 import dayjs from 'dayjs'
+import { IContentDocument } from '@nuxt/content/types/content'
 
-type DataType = {
-  item: NewsType
+type Data = {
+  article: IContentDocument | null
 }
 
-type NewsType = {
-  id: string
-  createdAt: string
-  updatedAt: string
-  title: string
-  thumbnail: ThumbnailType
-  content: string
+type Methods = {
+  formatDate(date: Date): string
 }
 
-type ThumbnailType = {
-  url: string
-}
+export default Vue.extend<Data, Methods, unknown, unknown>({
+  async asyncData({ $content, params }) {
+    const article = await $content('news', params.id).fetch()
 
-export default Vue.extend({
-  name: 'Id',
-  async asyncData({ params }: Context) {
-    const { data } = await axios.get<NewsType>(
-      'https://studyathome.microcms.io/api/v1/news/' + params.id,
-      {
-        headers: { 'X-API-KEY': process.env.API_KEY },
-      }
-    )
     return {
-      item: data,
+      article,
     }
   },
-  data(): DataType {
+  data() {
     return {
-      item: {
-        id: '',
-        createdAt: '',
-        updatedAt: '',
-        title: '',
-        thumbnail: {
-          url: '',
-        },
-        content: '',
-      },
+      article: null,
     }
   },
   methods: {
-    formatDate(date: string): string {
+    formatDate(date: Date): string {
       return dayjs(date).format('YYYY.MM.DD')
     },
   },
@@ -75,26 +63,48 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-.newsDetails {
-  margin: 17px 0 8px 0;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  color: #424242;
-}
-.newsTitle {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 6px 0;
-  letter-spacing: 0.03em;
-}
-
 .createdAt {
   margin: 4px 0;
 }
-.newsContent {
-  margin: 25px 0 8px 0;
-  font-size: 14px;
-  letter-spacing: 0.03em;
+
+.NewsArticle {
+  &-Container {
+    max-width: 1000px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  &-Details {
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #424242;
+
+    margin: {
+      top: 17px;
+      right: 0;
+      bottom: 8px;
+      left: 0;
+    }
+
+    &-DateTime {
+      margin: 4px 0;
+    }
+
+    &-Title {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 6px 0;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &-Body {
+    margin: 25px 0 8px 0;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+  }
 }
 </style>
