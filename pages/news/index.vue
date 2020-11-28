@@ -6,7 +6,14 @@
         <span class="NewsList-Title-Japanese">最新情報</span>
       </h1>
     </v-col>
-    <v-col v-for="(item, i) in newsArticles" :key="i" cols="12" lg="4" sm="6">
+    <v-col
+      v-for="(item, i) in newsArticles"
+      :key="i"
+      cols="12"
+      lg="4"
+      sm="6"
+      align-self="stretch"
+    >
       <v-card tag="article" elevation="0" :ripple="false" nuxt :to="item.path">
         <v-img
           :src="`/news/${item.thumbnailFilename}`"
@@ -44,8 +51,19 @@ export default Vue.extend<Data, Methods, unknown, unknown>({
   async asyncData({ $content }) {
     const articles = await $content('news').fetch()
 
-    return {
-      newsArticles: Array.isArray(articles) ? articles : [articles],
+    if (Array.isArray(articles)) {
+      // なぜか .createdAt が string になってしまうのでDate型に変換
+      const newsArticles = articles.sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      )
+      return {
+        newsArticles,
+      }
+    } else {
+      return {
+        newsArticles: [articles],
+      }
     }
   },
   data() {
