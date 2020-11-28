@@ -63,11 +63,11 @@ export default Vue.extend({
     const { data } = await axios.get<NewsListType>(
       'https://studyathome.microcms.io/api/v1/news',
       {
-        headers: { 'X-API-KEY': process.env.API_KEY }
+        headers: { 'X-API-KEY': process.env.API_KEY },
       }
     )
     return {
-      items: data.contents
+      items: data.contents,
     }
   },
   data(): DataType {
@@ -79,18 +79,18 @@ export default Vue.extend({
           updatedAt: '',
           title: '',
           thumbnail: {
-            url: ''
+            url: '',
           },
-          content: ''
-        }
-      ]
+          content: '',
+        },
+      ],
     }
   },
   methods: {
     formatDate(date: string): string {
       return dayjs(date).format('YYYY.MM.DD')
-    }
-  }
+    },
+  },
 })
 </script>
 

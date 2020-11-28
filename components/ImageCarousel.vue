@@ -14,7 +14,7 @@
           :pagination-enabled="false"
           :per-page-custom="[
             [600, 3],
-            [768, 5]
+            [768, 4],
           ]"
         >
           <slide
@@ -22,13 +22,14 @@
             :key="index"
             class="ImageCarousel-Slide"
           >
-            <img ref="carouselImg" :src="item.filePath" alt="" />
+            <picture ref="carouselImg">
+              <source type="image/webp" :srcset="item.webpPath" />
+              <img :src="item.filePath" alt="" />
+            </picture>
           </slide>
           <slide class="ImageCarousel-Slide">
             <div
-              :style="
-                `width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`
-              "
+              :style="`width: ${carouselSlideWidth}px; height: ${carouselSlideHeight}px;`"
             />
           </slide>
         </carousel>
@@ -42,13 +43,17 @@ export default {
   data() {
     return {
       items: [
-        { filePath: '/screenshot1.png' },
-        { filePath: '/screenshot2.png' },
-        { filePath: '/screenshot3.png' }
+        { filePath: '/screen_top.png', webpPath: '/screen_top.webp' },
+        {
+          filePath: '/screen_timetable.png',
+          webpPath: '/screen_timetable.webp',
+        },
+        { filePath: '/screen_contents.png', webpPath: '/screen_contents.webp' },
+        { filePath: '/screen_calendar.png', webpPath: '/screen_calendar.webp' },
       ],
       carouselSlideWidth: null,
       carouselSlideHeight: null,
-      carouselSlideImgHeight: null
+      carouselSlideImgHeight: null,
     }
   },
   mounted() {
@@ -85,15 +90,15 @@ export default {
       )[0]
       navigation.style.width = `${carouselOuter.clientWidth}px`
       carouselInner.style.height = 'initial'
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="scss">
 .ImageCarousel-Outer {
   overflow: hidden;
-  height: 860px;
+  height: auto;
 }
 .ImageCarousel-Slide {
   padding-right: 8px;

@@ -11,13 +11,13 @@ export default {
   props: {
     imgPath: {
       type: String,
-      required: true
+      required: true,
     },
     url: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

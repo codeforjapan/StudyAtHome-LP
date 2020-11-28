@@ -28,16 +28,14 @@
       :title="'こんな課題ありませんか?'"
       :items="[
         '急な休校で授業準備がやり直しに...',
-        '分散当行の準備などで大変',
-        '学校での授業と家庭学習をもっと連動した学びにしたい'
+        '分散登校の準備などで大変',
+        '学校での授業と家庭学習をもっと連動した学びにしたい',
       ]"
     />
     <back-template
       :title="'おうちの時間割でできること'"
       :sub-title="'How it works?'"
-      :desc="
-        '家庭学習用の時間割が簡単に作れて、子どもたちも\nスマホで簡単に見ることができます'
-      "
+      :desc="'家庭学習用の時間割が簡単に作れて、子どもたちも\nスマホで簡単に見ることができます'"
       :back-is-gray="false"
     >
       <template v-slot:contents>
@@ -46,27 +44,21 @@
             <icon-card
               :title="'学習計画表・時間割を\nかんたんに作成'"
               :icon-name="'mdi-calendar-text-outline'"
-              :desc="
-                '家庭学習中の子どもたちにむけて時間割を\n簡単に作成して共有できる'
-              "
+              :desc="'家庭学習中の子どもたちにむけて時間割を\n簡単に作成して共有できる'"
             />
           </v-col>
           <v-col cols="12" sm="12" md="4" lg="4">
             <icon-card
               :title="'学習教材や課題も合わせて\n生徒に届けられる'"
               :icon-name="'mdi-clipboard-text-multiple-outline'"
-              :desc="
-                'NHK for schoolの動画を\n時間割に紐付けて共有できるので\n生徒が勉強方法に困らない!'
-              "
+              :desc="'NHK for schoolの動画を\n時間割に紐付けて共有できるので\n生徒が勉強方法に困らない!'"
             />
           </v-col>
           <v-col cols="12" sm="12" md="4" lg="4">
             <icon-card
               :title="'家庭学習もスマホ・PCを\n使ってらくらく'"
               :icon-name="'mdi-cellphone-sound'"
-              :desc="
-                '生徒はスマホやPCを利用して\n時間割や課題を確認できるので\n家庭学習でも安心!'
-              "
+              :desc="'生徒はスマホやPCを利用して\n時間割や課題を確認できるので\n家庭学習でも安心!'"
             />
           </v-col>
         </v-row>
@@ -92,25 +84,30 @@
     </back-template>
     <back-template
       :title="'データ提供'"
-      :desc="
-        '時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'
-      "
+      :desc="'時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'"
       :back-is-gray="false"
-    />
-    <back-template :title="'おうちで時間割チーム'" :back-is-gray="true">
+    >
       <template v-slot:contents>
         <v-row>
           <image-card
-            img-path="/svgs/cfj_logo.svg"
-            url="https://code4japan.org"
+            img-path="/NfS_logo.png"
+            url="https://www.nhk.or.jp/school/"
           />
         </v-row>
-        <v-row class="Contributors">
+      </template>
+    </back-template>
+    <back-template :title="'おうちで時間割チーム'" :back-is-gray="true">
+      <template v-slot:contents>
+        <v-row>
+          <image-card img-path="/CfJLogo.png" url="https://code4japan.org" />
+        </v-row>
+        <v-row class="Contributors" justify="center">
           <v-col cols="4" sm="4" md="3" lg="3">
             <contributor-card
               :name="'武貞 真未'"
               :role="'企画・広報'"
               icon-path="/takesada.png"
+              webp-path="/takesada.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -118,6 +115,7 @@
               :name="'林 敬子'"
               :role="'UIUXデザイナー'"
               icon-path="/hayashi.png"
+              webp-path="/hayashi.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -125,6 +123,7 @@
               :name="'吉沢 太祐'"
               :role="'エンジニア'"
               icon-path="/yoshizawa.png"
+              webp-path="/yoshizawa.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -132,6 +131,7 @@
               :name="'福田 せいじ'"
               :role="'エンジニア'"
               icon-path="/fukuda.png"
+              webp-path="/fukuda.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -139,6 +139,7 @@
               :name="'渡邊 響'"
               :role="'エンジニア'"
               icon-path="/watanabe.png"
+              webp-path="/watanabe.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -146,6 +147,7 @@
               :name="'芦田 裕飛'"
               :role="'エンジニア'"
               icon-path="/ashida.png"
+              webp-path="/ashida.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -153,6 +155,7 @@
               :name="'池田 達哉'"
               :role="'エンジニア'"
               icon-path="/ikeda.png"
+              webp-path="/ikeda.webp"
             />
           </v-col>
           <v-col cols="4" sm="4" md="3" lg="3">
@@ -160,14 +163,42 @@
               :name="'大杉 洸輝'"
               :role="'デザイナー'"
               icon-path="/osugi.png"
+              webp-path="/osugi.webp"
+            />
+          </v-col>
+        </v-row>
+        <v-row>
+          <image-card img-path="/IL_logo.svg" url="https://info-lounge.jp/" />
+        </v-row>
+        <v-row class="Contributors" justify="center">
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'肥田野 正輝'"
+              :role="'エンジニア'"
+              icon-path="/IL_hidano.png"
+              webp-path="/IL_hidano.webp"
+            />
+          </v-col>
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'伊藤 宗太'"
+              :role="'エンジニア'"
+              icon-path="/IL_itou.png"
+              webp-path="/IL_itou.webp"
+            />
+          </v-col>
+          <v-col cols="4" sm="4" md="3" lg="3">
+            <contributor-card
+              :name="'今村 かずき'"
+              :role="'エンジニア'"
+              icon-path="/IL_imamura.png"
+              webp-path="/IL_imamura.webp"
             />
           </v-col>
         </v-row>
         <v-row class="MessageEffect">
           <message-effect
-            :title="
-              'おうちで時間割について質問等があれば\n気軽にお問い合わせください!'
-            "
+            :title="'おうちで時間割について質問等があれば\n気軽にお問い合わせください!'"
           />
         </v-row>
         <v-row class="RoundButton">
@@ -181,9 +212,7 @@
     <back-template
       :title="'私達と一緒におうちで時間割を\n作っていきませんか？'"
       :sub-title="'Join us'"
-      :desc="
-        'おうちで時間割は、学びのオープンデータ・\nオープンソース化を目指しています。\n開発元であるCode for Japanはさらなる機能充実の\nため、技術者を募集しております。\nまずは気軽にSlackチャンネルにご参加ください。'
-      "
+      :desc="'おうちで時間割は、学びのオープンデータ・\nオープンソース化を目指しています。\n開発元であるCode for Japanはさらなる機能充実の\nため、技術者を募集しております。\nまずは気軽にSlackチャンネルにご参加ください。'"
       :back-is-gray="false"
     >
       <template v-slot:contents>
@@ -196,42 +225,16 @@
           target="_blank"
           rel="noopener"
         >
-          <img src="/svgs/slack.svg" alt="slack" /> Slackに参加する
+          <picture>
+            <source type="image/webp" srcset="/Slack_Mark_Web.webp" />
+            <img src="/Slack_Mark_Web.png" alt="slack" />
+          </picture>
+          Slackに参加する
         </v-btn>
       </template>
     </back-template>
   </div>
 </template>
-
-<script>
-import CircleLogo from '@/components/CircleLogo.vue'
-import StartButton from '@/components/StartButton.vue'
-import HorizontalPhotos from '@/components/HorizontalPhotos'
-import IssueCard from '@/components/IssueCard.vue'
-import BackTemplate from '@/components/BackTemplate.vue'
-import IconCard from '@/components/IconCard.vue'
-import MessageEffect from '@/components/MessageEffect.vue'
-import RoundButton from '@/components/RoundButton.vue'
-import ImageCarousel from '@/components/ImageCarousel.vue'
-import ImageCard from '@/components/ImageCard.vue'
-import ContributorCard from '@/components/ContributorCard.vue'
-
-export default {
-  components: {
-    CircleLogo,
-    StartButton,
-    HorizontalPhotos,
-    IssueCard,
-    BackTemplate,
-    IconCard,
-    MessageEffect,
-    RoundButton,
-    ImageCarousel,
-    ImageCard,
-    ContributorCard
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .Index {
@@ -328,6 +331,9 @@ export default {
     font-weight: bold;
     transition: 0.3s;
     text-transform: none;
+    img {
+      height: 48px;
+    }
   }
 
   .SlackButton:hover {
