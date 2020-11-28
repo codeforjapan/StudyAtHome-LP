@@ -63,13 +63,9 @@ export default Vue.extend<Data, Methods, unknown, unknown>({
 </script>
 
 <style lang="scss" scoped>
-.createdAt {
-  margin: 4px 0;
-}
-
 .NewsArticle {
   &-Container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: {
       left: auto;
       right: auto;
