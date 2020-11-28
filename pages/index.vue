@@ -83,6 +83,41 @@
       </template>
     </back-template>
     <back-template
+      :title="'最新情報'"
+      :sub-title="'News'"
+      :back-is-gray="false"
+    >
+      <template v-slot:contents>
+        <v-container>
+          <v-row justify="center" align="center">
+            <v-col
+              v-for="(article, i) in newsArticles"
+              :key="i"
+              cols="12"
+              lg="4"
+              sm="6"
+              align-self="stretch"
+            >
+              <NewsArticleCard :article="article" />
+            </v-col>
+            <v-col cols="12">
+              <v-btn
+                class="ReadAllNewsButton"
+                color="#0071c2"
+                text
+                large
+                nuxt
+                to="/news/"
+              >
+                <span>すべて見る</span>
+                <v-icon class="pl-1">mdi-arrow-right</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-container>
+      </template>
+    </back-template>
+    <back-template
       :title="'データ提供'"
       :desc="'時間割にコンテンツへのリンクを掲載できるよう、\nデータを共有いただける教材コンテンツ\n提供企業・団体の賛同をお待ちしています。'"
       :back-is-gray="false"
@@ -236,6 +271,34 @@
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+import NewsArticleCard from '@/components/NewsArticleCard.vue'
+import { IContentDocument } from '@nuxt/content/types/content'
+
+type Data = {
+  newsArticles: IContentDocument[]
+}
+
+export default Vue.extend<Data, unknown, unknown, unknown>({
+  components: { NewsArticleCard },
+  async asyncData({ $content }) {
+    const articles = await $content('news')
+      .sortBy('createdAt', 'desc')
+      .limit(3)
+      .fetch()
+    return {
+      newsArticles: Array.isArray(articles) ? articles : [articles],
+    }
+  },
+  data() {
+    return {
+      newsArticles: [],
+    }
+  },
+})
+</script>
+
 <style lang="scss" scoped>
 .Index {
   color: $base-blue;
@@ -313,6 +376,11 @@
   .RoundButton {
     margin-top: 30px;
     margin-bottom: 60px;
+  }
+
+  .ReadAllNewsButton {
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .Contributors {
