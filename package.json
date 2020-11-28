@@ -21,16 +21,18 @@
     }
   },
   "dependencies": {
+    "@nuxt/content": "^1.11.1",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.0.2",
-    "nuxt": "^2.14.6",
+    "dayjs": "^1.9.6",
+    "nuxt": "^2.14.7",
     "nuxt-webfontloader": "^1.1.0",
     "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.6",
+    "@nuxt/types": "^2.14.7",
     "@nuxt/typescript-build": "^2.0.3",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
@@ -47,6 +49,7 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "stylelint": "^13.7.1",
+    "ts-loader": "^8.0.11",
     "typescript": "^4.0.3",
     "vue": "2.6.12",
     "vue-template-compiler": "^2.6.12",
