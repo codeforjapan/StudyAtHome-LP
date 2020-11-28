@@ -1,23 +1,86 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  mode: 'universal',
+  target: 'static',
+  /*
+   ** Headers of the page
+   ** See https://nuxtjs.org/api/configuration-head
+   */
   /*
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      prefix: 'og: http://ogp.me/ns#',
+    },
+    title: 'おうちで時間割',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        hid: 'keyword',
+        name: 'keyword',
+        content: 'CodeforJapan, おうちで時間割, デジタル, 学び, 今後の学習',
+      },
+      {
+        hid: 'author',
+        name: 'author',
+        content: 'Code for Japan',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'おうちで時間割 | About',
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: `https://www.studyathome.jp/`,
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'おうちで時間割 | About',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          '子どもの学びにデジタルの活用を - 臨時休校期間と今後の学習に向けて 簡単に楽しく学べる環境を今だから、みんなでつくろう。',
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'おうちで時間割 | About',
+      },
+      {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content:
+          '子どもの学びにデジタルの活用を - 臨時休校期間と今後の学習に向けて 簡単に楽しく学べる環境を今だから、みんなでつくろう。',
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'http://www.studyathome.jp/ogp.png',
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'http://www.studyathome.jp/ogp.png',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    script: [
+      {
+        src:
+          'https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js',
+      },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon-precomposed.png' },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -26,19 +89,21 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/global.scss'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~plugins/vue-carousel', mode: 'client' }],
+  components: true,
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     '@nuxt/typescript-build',
+    '@nuxt/components',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
   /*
    ** Nuxt.js modules
@@ -48,7 +113,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -57,8 +122,8 @@ export default {
   axios: {},
   webfontloader: {
     google: {
-      families: ['Roboto&display=swap', 'NotoSansJP&&display=swap']
-    }
+      families: ['Roboto&display=swap', 'NotoSansJP&&display=swap'],
+    },
   },
   /*
    ** vuetify module configuration
@@ -76,13 +141,13 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+          success: colors.green.accent3,
+        },
+      },
+    },
   },
   env: {
-    API_KEY: process.env.API_KEY
+    API_KEY: process.env.API_KEY,
   },
   /*
    ** Build configuration
@@ -91,5 +156,5 @@ export default {
     /*
      ** You can extend webpack config here
      */
-  }
+  },
 }
