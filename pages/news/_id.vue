@@ -35,7 +35,8 @@
               :disabled="item.disabled"
             >
               <template v-if="item.to === '/'">
-                <v-icon color="#0071c2" size="24px">mdi-home</v-icon
+                <v-icon class="Breadcrumb-HomeIcon" color="#0071c2" size="24px"
+                  >mdi-home</v-icon
                 ><span class="Breadcrumb-Label pl-1">{{ item.text }}</span>
               </template>
               <template v-else>
@@ -166,6 +167,10 @@ export default Vue.extend<Data, Methods, unknown, unknown>({
     font-size: 15px;
     font-weight: 600;
     vertical-align: bottom;
+  }
+
+  &-HomeIcon {
+    padding-bottom: 2px !important;
   }
 }
 </style>
